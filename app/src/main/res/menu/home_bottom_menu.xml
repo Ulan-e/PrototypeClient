@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_departments"
+        android:icon="@drawable/ic_baseline_bar_chart_24"
+        android:title="@string/text_departments" />
+
+    <item
+        android:id="@+id/item_map"
+        android:icon="@drawable/ic_outline_map_24"
+        android:title="@string/text_map" />
+
+    <item
+        android:id="@+id/item_email"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/text_profile" />
+</menu>

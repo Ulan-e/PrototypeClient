@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_package = "kg.optimabank.prototype.dev";
+option java_multiple_files = true;
+
+message UserSettings {
+  string username = 1;
+  string password = 2;
+  string clientId = 3;
+  string grantType = 4;
+  string accessToken = 5;
+  string refreshToken = 6;
+}

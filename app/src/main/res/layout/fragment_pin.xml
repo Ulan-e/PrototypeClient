@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_optima_bank"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/dp15"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_optimabank"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/title_pin_code"
+        style="@style/Text_18_main_black_bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/input_pin_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_optima_bank"
+        tools:ignore="ContentDescription"
+        tools:text="@string/text_input_pin_code" />
+
+    <kg.optimabank.prototype.common.views.PinInputView
+        android:id="@+id/input_pin_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        app:layout_constraintBottom_toTopOf="@+id/text_wrong_pin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_pin_code" />
+
+    <TextView
+        android:id="@+id/text_wrong_pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_ripple_rectangle"
+        android:paddingHorizontal="@dimen/dp8"
+        android:text="@string/text_enter_wrong_pin_code"
+        android:textAppearance="@style/Text_15_main_red"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cant_enter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_pin_code"
+        tools:ignore="UnusedAttribute"
+        tools:text="@string/text_enter_wrong_pin_code"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_cant_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp20"
+        android:background="@drawable/bg_ripple_rectangle"
+        android:paddingHorizontal="@dimen/dp8"
+        android:text="@string/text_can_not_enter"
+        android:textAppearance="@style/Text_15_main_red_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UnusedAttribute" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_corners"
+    android:elevation="3dp">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        style="@style/Text_18_main_black_bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginHorizontal="@dimen/dp20"
+        android:maxLines="1"
+        android:gravity="center"
+        android:text="@string/text_enter_to_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_fingerprint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:src="@drawable/ic_fingerprint_gray"
+        android:scaleType="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_title"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/text_fingerprint_description"
+        style="@style/Text_14_main_gray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp25"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="@string/text_please_enter_touch"
+        android:textColor="@color/color_text_fingerprint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_fingerprint"
+        tools:text="@string/text_please_enter_touch" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_use_pin_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp20"
+        android:background="?attr/selectableItemBackground"
+        android:text="@string/text_use_pin_code"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Text_15_main_red_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_fingerprint_description" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_login_touch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp20"
+        android:checked="false"
+        android:text="@string/text_enter_to_app_with_fingerprint"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Text_15_main_red_bold"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_use_pin_code" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress_bar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:visibility="gone"
+        app:indicatorColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:trackColor="@color/light_red"
+        app:trackThickness="3dp"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,48 @@
+<resources>
+    <string name="text_okay">Ок</string>
+    <string name="text_cancel">Отмена</string>
+    <string name="text_input_login">Введите Ваш логин</string>
+    <string name="text_input_password">Введите Ваш пароль</string>
+    <string name="text_login">Вход</string>
+    <string name="text_logout">Выход</string>
+    <string name="text_error">Ошибка</string>
+    <string name="text_registration">Регистрация</string>
+    <string name="text_try_again">Попробуйте снова</string>
+
+    <string name="text_device_is_rooted">Device rooted</string>
+    <string name="text_app_is_running_on_emulator">App is running on emulator</string>
+    <string name="text_app_is_not_from_store">App is not from store</string>
+    <string name="text_take_photo">Сделать фото</string>
+    <string name="text_location">Местонахождение</string>
+
+    <string name="text_can_not_enter">Не можете войти?</string>
+    <string name="text_enter_wrong_pin_code">Неправильный пин код?</string>
+    <string name="text_enter_to_app">Вход в приложение</string>
+    <string name="text_create_pin_code">Создайте пин-код</string>
+    <string name="text_create_pin_code_repeat">Повторите ввод пин-код</string>
+    <string name="text_enter_to_app_with_fingerprint">Вход по отпечатку пальца</string>
+    <string name="text_use_pin_code">Использовать пин-код</string>
+    <string name="text_input_pin_code">Введите пин-код</string>
+    <string name="text_wrong_pin_code">Неправильный пин-код</string>
+    <string name="text_please_enter_touch">Прикоснитесь к сенсору</string>
+    <string name="text_wrong_fingerprint">Отпечаток не распознан. Попробуйте еще раз.</string>
+
+    <string name="text_error_count_1">Осталось 1 попытка</string>
+    <string name="text_error_count_2">Осталось %1$s попытки</string>
+    <string name="text_error_count_3">Осталось %1$s попыток</string>
+
+    <string name="text_departments">Список</string>
+    <string name="text_map">Карта</string>
+    <string name="text_profile">Профиль</string>
+
+    <string name="text_digit_0">0</string>
+    <string name="text_digit_1">1</string>
+    <string name="text_digit_2">2</string>
+    <string name="text_digit_3">3</string>
+    <string name="text_digit_4">4</string>
+    <string name="text_digit_5">5</string>
+    <string name="text_digit_6">6</string>
+    <string name="text_digit_7">7</string>
+    <string name="text_digit_8">8</string>
+    <string name="text_digit_9">9</string>
+</resources>

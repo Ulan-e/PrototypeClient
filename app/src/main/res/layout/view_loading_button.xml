@@ -1,0 +1,36 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_button_login"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/button_height"
+    tools:ignore="UnusedAttribute">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_button_action"
+        android:clickable="true"
+        android:focusable="true"
+        android:textAllCaps="false"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/btn_text"
+        style="@style/Text_17_main_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="3dp"
+        android:text="@string/text_login"
+        android:textAlignment="center" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/white"
+        android:visibility="gone" />
+</FrameLayout>

@@ -1,0 +1,126 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'com.google.protobuf' version '0.8.12'
+}
+
+android {
+    compileSdk SdkConfigs.compileSdk
+
+    defaultConfig {
+        minSdk SdkConfigs.minSdk
+        targetSdk SdkConfigs.targetSdk
+        versionCode Releases.versionCode
+        versionName Releases.versionName
+
+        testInstrumentationRunner TestLibraries.jUnitRunner
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            debuggable true
+        }
+    }
+
+    flavorDimensions "version"
+    productFlavors {
+        dev {
+            applicationId ApplicationId.id
+            dimension "version"
+            resValue "string", "app_name", "Prototype-dev"
+        }
+
+        prod {
+            applicationId ApplicationId.dev
+            dimension "version"
+            resValue "string", "app_name", "Prototype"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation AndroidLibraries.multidex
+    implementation AndroidLibraries.activityKtx
+    implementation AndroidLibraries.fragmentKtx
+    implementation AndroidLibraries.coreKtx
+    implementation AndroidLibraries.appCompat
+    implementation AndroidLibraries.material
+    implementation AndroidLibraries.constraintLayout
+    implementation AndroidLibraries.lifecycleViewModel
+    kapt(AndroidLibraries.lifecycleCompiler)
+    implementation AndroidLibraries.lifecycleCommon
+    implementation AndroidLibraries.lifecycleRuntime
+    implementation AndroidLibraries.lifecycleLiveData
+    implementation AndroidLibraries.navigationUI
+    implementation AndroidLibraries.navigationFragment
+
+    implementation Libraries.timber
+    implementation Libraries.coroutines
+
+    implementation Libraries.dagger
+    implementation Libraries.daggerAndroid
+    kapt Libraries.daggerAndroidProcessor
+    kapt Libraries.daggerCompiler
+
+    implementation Libraries.retrofit
+    implementation Libraries.gsonConverter
+    implementation Libraries.okhttp
+    implementation Libraries.loggingInterceptor
+
+    implementation Libraries.dataStore
+    implementation Libraries.dataStoreCore
+    implementation Libraries.dataStorePreferences
+    implementation Libraries.dataStorePreferencesCore
+    implementation Libraries.protobuf
+
+    implementation Libraries.room
+    implementation Libraries.roomKtx
+    annotationProcessor Libraries.roomCompiler
+    kapt Libraries.roomCompiler
+
+    implementation Libraries.yandexMap
+    implementation Libraries.rootBeer
+
+    testImplementation TestLibraries.jUnit
+    androidTestImplementation TestLibraries.androidJUnit
+    androidTestImplementation TestLibraries.espresso
+}
+
+protobuf {
+    protoc {
+        artifact = Libraries.protobufProtoc
+    }
+
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                java {
+                    option 'lite'
+                }
+            }
+        }
+    }
+}

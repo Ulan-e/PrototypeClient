@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp10"
+    android:elevation="@dimen/dp10"
+    app:cardCornerRadius="@dimen/dp10"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp20"
+        android:layout_marginVertical="@dimen/dp10"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_code"
+            style="@style/Text_16_main_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="998560" />
+
+        <TextView
+            android:id="@+id/text_title"
+            style="@style/Text_16_main_black_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dp10"
+            tools:text="Филиал ОАО Оптима Банк в г.Бишкек №1" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:overScrollMode="never">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:id="@+id/image_optima_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:contentDescription="@string/app_name"
+            android:paddingHorizontal="50dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_optima_bank"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_input_login"
+            style="@style/Text_Input_Filled_Box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp25"
+            android:layout_marginTop="@dimen/dp15"
+            app:errorIconDrawable="@null"
+            app:hintAnimationEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_optima_bank">
+
+            <EditText
+                android:id="@+id/input_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:autofillHints="no"
+                android:hint="@string/text_input_login"
+                android:imeOptions="actionDone"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:paddingVertical="5dp"
+                android:textAppearance="@style/Text_17_main_black"
+                app:errorIconDrawable="@null" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_input_password"
+            style="@style/Text_Input_Filled_Box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp25"
+            android:layout_marginVertical="@dimen/dp15"
+            app:errorIconDrawable="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_input_login"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/input_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_text_height"
+                android:autofillHints="no"
+                android:fontFamily="sans-serif"
+                android:hint="@string/text_input_password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword|text"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:paddingVertical="5dp"
+                android:textAllCaps="false"
+                android:textAppearance="@style/Text_17_main_black"
+                app:errorIconDrawable="@null" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <kg.optimabank.prototype.common.views.LoadingButtonView
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp25"
+            android:layout_marginTop="@dimen/dp15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_input_password" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_registration"
+            style="@style/Text_16_main_red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp25"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/bg_ripple_rectangle"
+            android:paddingHorizontal="5dp"
+            android:text="@string/text_registration"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login"
+            app:layout_constraintVertical_bias="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

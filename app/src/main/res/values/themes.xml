@@ -1,0 +1,126 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Prototype" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryVariant">@color/red</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/red</item>
+        <item name="colorSecondaryVariant">@color/red</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="Pin_Digit_Indicator">
+        <item name="android:layout_height">12dp</item>
+        <item name="android:layout_width">12dp</item>
+        <item name="android:background">@drawable/bg_unchecked_pin_indicator</item>
+    </style>
+
+    <style name="Pin_Digit_Button">
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:background">@drawable/bg_ripple_circle</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="Custom_BottomSheetDialog_Style" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="bottomSheetStyle">@style/App_Modal_Style</item>
+    </style>
+
+    <style name="App_Modal_Style" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_white_corners</item>
+    </style>
+
+    <style name="Text_Input_Filled_Box" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">#F6F6F6</item>
+        <item name="boxBackgroundMode">filled</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/dp10</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/dp10</item>
+        <item name="boxCornerRadiusTopStart">@dimen/dp10</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/dp10</item>
+        <item name="hintEnabled">false</item>
+        <item name="hintTextColor">@color/gray</item>
+    </style>
+
+    <style name="Red_Button_Style">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/red</item>
+    </style>
+
+    <style name="Text_14_main_gray">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Text_15_main_red">
+        <item name="android:textSize">@dimen/text_size_15</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Text_15_main_red_bold">
+        <item name="android:textSize">@dimen/text_size_15</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_16_main_red">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Text_16_main_black">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Text_16_main_black_bold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Text_17_main_white">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_17_main_black">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_18_main_black_bold">
+        <item name="android:textSize">@dimen/text_size_17</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text_22_main_black_bold">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#252525</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
